@@ -8,7 +8,6 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 @layer base {
@@ -74,12 +73,11 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-    :root {
+  :root {
     --text-stroke-width: 0.5px;
-    --text-stroke-color: #FFA360;
-    --text-fill-color: #61707F;
+    --text-stroke-color: #ffa360;
+    --text-fill-color: #61707f;
   }
-
 }
 
 @layer utilities {
@@ -104,4 +102,31 @@ body {
   .text-stroke-inactive {
     font-weight: 700;
   }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #9977ce;
+  border-radius: 100%;
+  width: 32px !important;
+  height: 32px !important;
+  color: white !important;
+  top: 40px !important;
+}
+
+@media (max-width: 640px) {
+  .swiper-button-container {
+    position: absolute;
+    top: 350px;
+  }
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: black !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 18px !important;
 }
