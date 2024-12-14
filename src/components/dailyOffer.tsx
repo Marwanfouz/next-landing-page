@@ -9,7 +9,7 @@ import icon from '../../public/img/dailyoffer/icon.svg';
 
 export default function DailyOffer() {
   return (
-    <section className="py-12 px-4" dir="rtl">
+    <section className="py-12 px-4 overflow-hidden" dir="rtl">
       <motion.div
         className="w-full max-w-6xl mx-auto"
         initial={{ opacity: 0, x: -500, scale: 0.8 }}

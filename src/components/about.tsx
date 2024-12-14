@@ -7,7 +7,7 @@ import about from '../../public/img/about/about.png';
 
 export default function About() {
   return (
-    <section className="py-16 bg-[#FDF5FF]">
+    <section className="py-16 bg-[#FDF5FF] overflow-hidden">
       <motion.div
         className="container mx-auto flex flex-col md:flex-row-reverse items-center gap-8 px-4"
         initial={{ opacity: 0, x: -500, scale: 0.8 }}

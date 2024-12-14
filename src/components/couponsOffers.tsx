@@ -79,7 +79,7 @@ export default function CouponsOffers() {
 
   return (
     <section
-      className="py-12 bg-[url('../../public/img/couponsoffers/image.png')] "
+      className="py-12 bg-[url('../../public/img/couponsoffers/image.png')] overflow-hidden"
       id="allcoupons"
     >
       <motion.div
