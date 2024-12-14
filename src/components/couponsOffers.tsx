@@ -7,7 +7,8 @@ import CouponsCard from './couponsCard';
 import { Coupon } from '@/types';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
+import { motion } from 'framer-motion';
 
 export default function CouponsOffers() {
   const coupons: Coupon[] = [
@@ -81,7 +82,13 @@ export default function CouponsOffers() {
       className="py-12 bg-[url('../../public/img/couponsoffers/image.png')] "
       id="allcoupons"
     >
-      <div className="container md:mr-auto px-4 md:px-0">
+      <motion.div
+        className="container md:mr-auto px-4 md:px-0"
+        initial={{ opacity: 0, x: -500, scale: 0.8 }}
+        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+      >
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-bold text-white text-center m-auto">
             عروض وكوبونات خاصة بمناسبة اليوم الوطني الـــ94
@@ -93,7 +100,6 @@ export default function CouponsOffers() {
             عرض الكل
           </Link>
         </div>
-
         <div className="container mr-auto">
           <div className="relative">
             <h2 className="text-3xl font-bold mb-16 text-right font-arabic">
@@ -105,10 +111,14 @@ export default function CouponsOffers() {
             </div>
           </div>
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             navigation={{
               nextEl: '.swiper-button-next-couponsoffers',
               prevEl: '.swiper-button-prev-couponsoffers',
+            }}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
             }}
             spaceBetween={20}
             slidesPerView={3}
@@ -124,7 +134,7 @@ export default function CouponsOffers() {
             ))}
           </Swiper>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -91,9 +91,21 @@ body {
     text-shadow: 0 0 1px var(--text-fill-color);
   }
 
+  .text-stroke-active:hover {
+    color: var(--text-fill-color);
+    -webkit-text-stroke: var(--text-stroke-width) #543883;
+    text-shadow: 0 0 1px var(--text-fill-color);
+  }
+
   .text-stroke-button {
     color: white;
     -webkit-text-stroke: var(--text-stroke-width) var(--text-stroke-color);
+    text-shadow: 0 0 1px white;
+  }
+
+  .text-stroke-button:hover {
+    color: white;
+    -webkit-text-stroke: var(--text-stroke-width) #543883;
     text-shadow: 0 0 1px white;
   }
 
@@ -158,18 +170,4 @@ body {
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-size: 18px !important;
-}
-
-.circle {
-  /* Ellipse 5 */
-
-  position: absolute;
-  width: 200px;
-  height: 1275px;
-  left: 155px;
-  top: -312px;
-
-  background: linear-gradient(185.99deg, #543883 14.21%, #a33670 74.36%);
-  /* transform: matrix(-1, 0, 0, 1, 0, 0);
-  transform: skewX(20deg); */
 }

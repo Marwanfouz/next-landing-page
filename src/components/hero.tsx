@@ -14,8 +14,8 @@ const floatingAnimation = {
   y: ['-10%', '10%'],
   transition: {
     y: {
-      // repeat: Infinity,
-      // repeatType: 'reverse',
+      repeat: Infinity,
+      repeatType: 'reverse',
       duration: 2,
       ease: 'easeInOut',
     },
@@ -83,9 +83,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* Content */}
       <div className="container mx-auto px-4 py-12 text-center relative z-10">
-        {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -101,7 +99,6 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Main Text */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -127,7 +124,6 @@ export default function Hero() {
           في متجر مكتبة جرير
         </motion.p>
 
-        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -139,7 +135,6 @@ export default function Hero() {
           </Button>
         </motion.div>
 
-        {/* Search Bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

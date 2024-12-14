@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import about from '../../public/img/about/about.png';
@@ -7,7 +8,20 @@ import about from '../../public/img/about/about.png';
 export default function About() {
   return (
     <section className="py-16 bg-[#FDF5FF]">
-      <div className="container mx-auto flex flex-col md:flex-row-reverse items-center gap-8 px-4">
+      <motion.div
+        className="container mx-auto flex flex-col md:flex-row-reverse items-center gap-8 px-4"
+        initial={{ opacity: 0, x: -500, scale: 0.8 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          scale: 1,
+        }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{
+          duration: 1,
+          ease: 'easeOut',
+        }}
+      >
         <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
           <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
             <Image
@@ -59,7 +73,7 @@ export default function About() {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

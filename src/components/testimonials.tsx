@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import image from '../../public/img/testimonials/image.svg';
@@ -16,20 +17,22 @@ const testimonials = [
     rating: 4,
     badge: 'آراء العملاء والأعضاء في كوبونات وعروض جو اوفر الحصرية',
   },
-  // Add more testimonials as needed
 ];
 
 export default function Testimonials() {
   return (
     <section className="py-12 bg-gray-50" dir="rtl">
-      <div className="container mx-auto px-4">
+      <motion.div
+        className="container mx-auto px-4"
+        initial={{ opacity: 0, x: -500, scale: 0.8 }}
+        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+      >
         <div className="relative">
           <Swiper
             modules={[Navigation]}
-            navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            }}
+            navigation
             loop={true}
             className="testimonials-swiper"
           >
@@ -39,18 +42,8 @@ export default function Testimonials() {
               </SwiperSlide>
             ))}
           </Swiper>
-
-          {/* Custom Navigation Buttons */}
-          <div className="flex justify-center gap-4 mt-8">
-            <button className="swiper-button-prev w-12 h-12 rounded-full bg-[#9977CE] text-white flex items-center justify-center focus:outline-none hover:bg-[#8A67C0]">
-              <span className="sr-only">Previous</span>
-            </button>
-            <button className="swiper-button-next w-12 h-12 rounded-full bg-[#9977CE] text-white flex items-center justify-center focus:outline-none hover:bg-[#8A67C0]">
-              <span className="sr-only">Next</span>
-            </button>
-          </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

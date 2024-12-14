@@ -2,9 +2,10 @@
 
 import { ReactNode } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 
 interface SliderProps {
   data: any[];
@@ -36,7 +37,7 @@ export default function Slider({
           </div>
         </div>
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           navigation={{
             nextEl: `.swiper-button-next-${sliderButton}`,
             prevEl: `.swiper-button-prev-${sliderButton}`,
@@ -44,6 +45,10 @@ export default function Slider({
           spaceBetween={20}
           slidesPerView={4}
           loop={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
@@ -52,7 +57,11 @@ export default function Slider({
           className="relative"
         >
           {data.map((item) => (
-            <SwiperSlide key={item.id}>{CardComponent(item)}</SwiperSlide>
+            <SwiperSlide key={item.id} className="swiper-slide">
+              <div className="swiper-slide-content opacity-100 transition-transform transform duration-1000 ease-in-out">
+                {CardComponent(item)}
+              </div>
+            </SwiperSlide>
           ))}
         </Swiper>
       </div>

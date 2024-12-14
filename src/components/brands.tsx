@@ -7,6 +7,7 @@ import nana from '../../public/img/brands/nana.png';
 import tmor from '../../public/img/brands/tmor.png';
 import BrandsCard from './brandsCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 
 const brands = [
   { id: 1, name: 'أكلات جدودنا', image: gdodna },
@@ -25,6 +26,7 @@ export default function Brands() {
           تصفح حسب العلامات التجارية
         </h2>
         <Swiper
+          modules={[Autoplay]}
           spaceBetween={20}
           slidesPerView={4}
           loop={true}
@@ -32,6 +34,10 @@ export default function Brands() {
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 4 },
+          }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
           }}
           className="relative"
         >
