@@ -44,7 +44,7 @@ export default function Brands() {
 
         <div className="text-center mt-8">
           <Link
-            href="/all-brands"
+            href="#"
             className="text-[#2E398E] text-sm md:text-base hover:underline"
           >
             عرض الكل

@@ -159,3 +159,17 @@ body {
 .swiper-button-next:after {
   font-size: 18px !important;
 }
+
+.circle {
+  /* Ellipse 5 */
+
+  position: absolute;
+  width: 200px;
+  height: 1275px;
+  left: 155px;
+  top: -312px;
+
+  background: linear-gradient(185.99deg, #543883 14.21%, #a33670 74.36%);
+  /* transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: skewX(20deg); */
+}

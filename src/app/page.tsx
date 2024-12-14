@@ -6,6 +6,9 @@ import About from '@/components/about';
 import AllCoupons from '@/components/allCoupons';
 import CouponsOffers from '@/components/couponsOffers';
 import ExclusiveOffers from '@/components/exclusiveOffers';
+import Testimonials from '@/components/testimonials';
+import Blogs from '@/components/blogs';
+import DailyOffer from '@/components/dailyOffer';
 
 export default function Home() {
   return (
@@ -18,6 +21,9 @@ export default function Home() {
       <AllCoupons />
       <CouponsOffers />
       <ExclusiveOffers />
+      <Testimonials />
+      <Blogs />
+      <DailyOffer />
     </main>
   );
 }
