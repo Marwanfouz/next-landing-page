@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import image from '../../public/img/dailyOffer/image.png';
-import icon from '../../public/img/dailyOffer/icon.svg';
+import image from '../../public/img/dailyoffer/image.png';
+import icon from '../../public/img/dailyoffer/icon.svg';
 
 export default function DailyOffer() {
   return (
