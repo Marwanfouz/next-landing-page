@@ -7,7 +7,7 @@ import Slider from './slider';
 import CouponsCard from './couponsCard';
 import { Coupon } from '@/types';
 
-export default function Coupons() {
+export default function ExclusiveOffers() {
   const coupons: Coupon[] = [
     {
       id: 1,
@@ -66,12 +66,12 @@ export default function Coupons() {
   ];
 
   return (
-    <section className="py-12 bg-gray-50 " id="coupons">
+    <section className="py-12 bg-gray-50 " id="exclusiveoffers">
       <Slider
         data={coupons}
         CardComponent={CouponsCard}
-        title="الكوبونات الأكثر استخداماً"
-        sliderButton="coupons"
+        title="العروض الحصــرية"
+        sliderButton="exclusiveoffers"
       />
     </section>
   );

@@ -1,27 +1,27 @@
-"use client"
+'use client';
 
-import { useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { usePathname } from 'next/navigation'
-import { Button } from '@/components/ui/button'
-import { Menu, X } from 'lucide-react'
-import goofferSvg from '../../public/gooffer.svg'
-import engSvg from '../../public/eng.svg'
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import { Menu, X } from 'lucide-react';
+import goofferSvg from '../../public/gooffer.svg';
+import engSvg from '../../public/eng.svg';
 
-export function Header() {
-  const pathname = usePathname()
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+export default function Header() {
+  const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
     { title: 'الرئيسية', href: '#' },
     { title: 'الفئات', href: '#categories' },
     { title: 'العلامات التجارية', href: '#brands' },
-    { title: "الكوبونات", href: '#coupons' },
-    { title: 'التخفيضات', href: '#sales' },
+    { title: 'الكوبونات', href: '#coupons' },
+    { title: 'التخفيضات', href: '#exclusiveoffers' },
     { title: 'تطبيق الجوال', href: '#app' },
-    { title: 'تواصل معنا', href: '#contact' },
-  ]
+    { title: 'تواصل معنا', href: '#footer' },
+  ];
 
   return (
     <header className="border-b bg-[#F7F7F7]">
@@ -44,16 +44,22 @@ export function Header() {
                 className={`text-sm font-bold relative group text-stroke-active`}
               >
                 {item.title}
-                <span 
+                <span
                   className={`absolute bottom-[-14px] left-1/2 transform -translate-x-1/2 w-1 h-1 bg-[#FFA360] rounded-full transition-opacity ${
-                    pathname === item.href ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                    pathname === item.href
+                      ? 'opacity-100'
+                      : 'opacity-0 group-hover:opacity-100'
                   }`}
                 ></span>
               </Link>
             ))}
           </div>
           <div className="hidden md:flex items-center gap-2">
-            <Button variant="ghost" size="icon" className="rounded-sm border-2 border-[#FFA360] text-[#61707F] hover:text-[#FFA360] hover:bg-transparent w-20">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="rounded-sm border-2 border-[#FFA360] text-[#61707F] hover:text-[#FFA360] hover:bg-transparent w-20"
+            >
               <Image
                 src={engSvg}
                 alt="eng lang icon"
@@ -72,7 +78,11 @@ export function Header() {
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </Button>
         </nav>
       </div>
@@ -92,7 +102,11 @@ export function Header() {
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="flex items-center px-5">
-              <Button variant="ghost" size="icon" className="rounded-sm border-2 border-[#FFA360] text-[#61707F] hover:text-[#FFA360] hover:bg-transparent w-20">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-sm border-2 border-[#FFA360] text-[#61707F] hover:text-[#FFA360] hover:bg-transparent w-20"
+              >
                 <Image
                   src={engSvg}
                   alt="eng lang icon"
@@ -109,5 +123,5 @@ export function Header() {
         </div>
       )}
     </header>
-  )
+  );
 }

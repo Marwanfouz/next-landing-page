@@ -21,17 +21,17 @@ export default function Slider({
 }: SliderProps) {
   return (
     <div>
-      <div className="container mx-auto px-4">
+      <div className="container md:mr-auto px-4 md:px-0">
         <div className="relative">
           <h2 className="text-3xl font-bold mb-16 text-right font-arabic">
             {title}
           </h2>
           <div className="swiper-button-container mx-auto w-[35%] inset-0">
             <div
-              className={`swiper-button-prev-${sliderButton} swiper-button-prev`}
+              className={`swiper-button-prev-${sliderButton} swiper-button-prev md:!left-[80px]`}
             />
             <div
-              className={`swiper-button-next-${sliderButton} swiper-button-next !left-[60px] !justify-self-end`}
+              className={`swiper-button-next-${sliderButton} swiper-button-next md:!left-[120px] !justify-self-end`}
             />
           </div>
         </div>
