@@ -9,13 +9,13 @@ import icon from '../../public/img/dailyoffer/icon.svg';
 
 export default function DailyOffer() {
   return (
-    <section className="py-12 px-4 overflow-hidden" dir="rtl">
+    <section className="py-12 px-4" dir="rtl">
       <motion.div
         className="w-full max-w-6xl mx-auto"
-        initial={{ opacity: 0, x: -500, scale: 0.8 }}
-        whileInView={{ opacity: 1, x: 0, scale: 1 }}
-        viewport={{ once: true, amount: 0.5 }}
+        initial={{ opacity: 0, scale: 0.8, clipPath: 'circle(0%)' }}
+        whileInView={{ opacity: 1, scale: 1, clipPath: 'circle(100%)' }}
         transition={{ duration: 1, ease: 'easeOut' }}
+        viewport={{ once: true }}
       >
         <Card className="overflow-hidden rounded-[32px] relative">
           <Image

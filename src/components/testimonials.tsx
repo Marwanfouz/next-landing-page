@@ -21,13 +21,13 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-12 bg-gray-50 overflow-hidden" dir="rtl">
+    <section className="py-12 bg-gray-50" dir="rtl">
       <motion.div
         className="container mx-auto px-4"
-        initial={{ opacity: 0, x: -500, scale: 0.8 }}
-        whileInView={{ opacity: 1, x: 0, scale: 1 }}
-        viewport={{ once: true, amount: 0.5 }}
+        initial={{ opacity: 0, scale: 0.8, clipPath: 'circle(0%)' }}
+        whileInView={{ opacity: 1, scale: 1, clipPath: 'circle(100%)' }}
         transition={{ duration: 1, ease: 'easeOut' }}
+        viewport={{ once: true }}
       >
         <div className="relative">
           <Swiper

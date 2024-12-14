@@ -7,20 +7,13 @@ import about from '../../public/img/about/about.png';
 
 export default function About() {
   return (
-    <section className="py-16 bg-[#FDF5FF] overflow-hidden">
+    <section className="py-16 bg-[#FDF5FF]">
       <motion.div
         className="container mx-auto flex flex-col md:flex-row-reverse items-center gap-8 px-4"
-        initial={{ opacity: 0, x: -500, scale: 0.8 }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          scale: 1,
-        }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{
-          duration: 1,
-          ease: 'easeOut',
-        }}
+        initial={{ opacity: 0, scale: 0.8, clipPath: 'circle(0%)' }}
+        whileInView={{ opacity: 1, scale: 1, clipPath: 'circle(100%)' }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        viewport={{ once: true }}
       >
         <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
           <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">

@@ -79,15 +79,15 @@ export default function CouponsOffers() {
 
   return (
     <section
-      className="py-12 bg-[url('../../public/img/couponsoffers/image.png')] overflow-hidden"
+      className="py-12 bg-[url('../../public/img/couponsoffers/image.png')]"
       id="allcoupons"
     >
       <motion.div
         className="container md:mr-auto px-4 md:px-0"
-        initial={{ opacity: 0, x: -500, scale: 0.8 }}
-        whileInView={{ opacity: 1, x: 0, scale: 1 }}
-        viewport={{ once: true, amount: 0.5 }}
+        initial={{ opacity: 0, scale: 0.8, clipPath: 'circle(0%)' }}
+        whileInView={{ opacity: 1, scale: 1, clipPath: 'circle(100%)' }}
         transition={{ duration: 1, ease: 'easeOut' }}
+        viewport={{ once: true }}
       >
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-bold text-white text-center m-auto">
