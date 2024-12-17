@@ -22,7 +22,7 @@ export default function Slider({
 }: SliderProps) {
   return (
     <div>
-      <div className="container m-auto px-4">
+      <div className="container mx-auto px-4">
         <div className="relative">
           <h2 className="text-3xl font-bold mb-16 text-right font-arabic">
             {title}
@@ -43,7 +43,7 @@ export default function Slider({
             prevEl: `.swiper-button-prev-${sliderButton}`,
           }}
           spaceBetween={20}
-          slidesPerView={4}
+          slidesPerView={3.5}
           loop={true}
           autoplay={{
             delay: 2000,
@@ -52,7 +52,8 @@ export default function Slider({
           breakpoints={{
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
-            1024: { slidesPerView: 4 },
+            768: { slidesPerView: 2.5 },
+            1024: { slidesPerView: 3.5 },
           }}
           className="relative"
         >

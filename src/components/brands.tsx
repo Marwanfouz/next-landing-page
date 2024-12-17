@@ -28,16 +28,17 @@ export default function Brands() {
         <Swiper
           modules={[Autoplay]}
           spaceBetween={20}
-          slidesPerView={4}
+          slidesPerView={3.5}
           loop={true}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 4 },
-          }}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
+          }}
+          breakpoints={{
+            320: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 2.5 },
+            1024: { slidesPerView: 3.5 },
           }}
           className="relative"
         >

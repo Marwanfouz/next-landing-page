@@ -55,7 +55,7 @@ export default function DailyOffer() {
                   <p className="text-gray-200 text-lg">
                     احصل على كود خصم سنتر بوينت بقيمة 50% على منتجات مختارة
                   </p>
-                  <Button className="bg-[#FFA360] hover:bg-[#FF7043] text-white px-8 py-6 text-lg rounded-xl flex gap-1">
+                  <Button className="bg-[#FFA360] hover:bg-[#FF7043] hover:scale-105 transform transition-all duration-300 text-white px-8 py-6 text-lg rounded-xl flex gap-1 items-center">
                     <Image src={icon} alt="icon" width={24} height={24} />
                     عرض الكود
                   </Button>

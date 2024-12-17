@@ -121,12 +121,12 @@ export default function CouponsOffers() {
               disableOnInteraction: false,
             }}
             spaceBetween={20}
-            slidesPerView={3}
+            slidesPerView={3.5}
             loop={true}
             breakpoints={{
               320: { slidesPerView: 1 },
               640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              1024: { slidesPerView: 3.5 },
             }}
           >
             {coupons.map((item) => (
