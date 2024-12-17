@@ -51,17 +51,17 @@ export default function Blogs() {
               variant="outline"
               size="icon"
               className="rounded-full"
-              aria-label="Next article"
+              aria-label="Previous article"
             >
-              <ArrowLeft className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4" />
             </Button>
             <Button
               variant="outline"
               size="icon"
               className="rounded-full"
-              aria-label="Previous article"
+              aria-label="Next article"
             >
-              <ArrowRight className="h-4 w-4" />
+              <ArrowLeft className="h-4 w-4" />
             </Button>
           </div>
         </div>

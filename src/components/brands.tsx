@@ -21,7 +21,7 @@ const brands = [
 export default function Brands() {
   return (
     <section className="py-12 bg-[#FDF5FF]" id="brands">
-      <div className="container md:mr-auto px-4 md:px-0">
+      <div className="container m-auto px-4">
         <h2 className="text-center text-2xl md:text-3xl font-bold mb-8 text-[#363062]">
           تصفح حسب العلامات التجارية
         </h2>

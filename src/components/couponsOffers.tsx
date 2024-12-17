@@ -83,7 +83,7 @@ export default function CouponsOffers() {
       id="allcoupons"
     >
       <motion.div
-        className="container md:mr-auto px-4 md:px-0"
+        className="container m-auto px-4"
         initial={{ opacity: 0, scale: 0.8, clipPath: 'circle(0%)' }}
         whileInView={{ opacity: 1, scale: 1, clipPath: 'circle(100%)' }}
         transition={{ duration: 1, ease: 'easeOut' }}

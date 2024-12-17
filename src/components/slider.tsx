@@ -22,7 +22,7 @@ export default function Slider({
 }: SliderProps) {
   return (
     <div>
-      <div className="container md:mr-auto px-4 md:px-0">
+      <div className="container m-auto px-4">
         <div className="relative">
           <h2 className="text-3xl font-bold mb-16 text-right font-arabic">
             {title}
